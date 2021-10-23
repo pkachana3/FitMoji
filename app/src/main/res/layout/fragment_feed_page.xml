@@ -54,4 +54,12 @@
         android:textColor="@color/black"
         android:text="Feed" />
 
+    <androidx.recyclerview.widget.RecyclerView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/FitMaker"
+        android:layout_width="409dp"
+        android:layout_height="628dp"
+        tools:layout_editor_absoluteX="1dp"
+        tools:layout_editor_absoluteY="49dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

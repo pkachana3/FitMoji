@@ -31,6 +31,7 @@ class ProfilePage : Fragment(), View.OnClickListener {
     override fun onClick(p0: View?) {
         when(p0!!.id) {
             R.id.logout -> {
+                navController!!.navigate(R.id.action_profilePage_to_welcomePage)
                 FirebaseAuth.getInstance().signOut()
                 val providers = arrayListOf(
                     AuthUI.IdpConfig.GoogleBuilder().build(),
