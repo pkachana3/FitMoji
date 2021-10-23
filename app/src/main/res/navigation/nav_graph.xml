@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/welcomePage">
+
+    <fragment
+        android:id="@+id/feedPage"
+        android:name="com.example.fitmoji.FeedPage"
+        android:label="fragment_feed_page"
+        tools:layout="@layout/fragment_feed_page" >
+        <action
+            android:id="@+id/action_feedPage_to_votePage"
+            app:destination="@id/votePage" />
+        <action
+            android:id="@+id/action_feedPage_to_fitMakerPage"
+            app:destination="@id/fitMakerPage" />
+        <action
+            android:id="@+id/action_feedPage_to_profilePage"
+            app:destination="@id/profilePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/fitMakerPage"
+        android:name="com.example.fitmoji.FitMakerPage"
+        android:label="fragment_fit_maker_page"
+        tools:layout="@layout/fragment_fit_maker_page" >
+        <action
+            android:id="@+id/action_fitMakerPage_to_votePage"
+            app:destination="@id/votePage" />
+        <action
+            android:id="@+id/action_fitMakerPage_to_feedPage"
+            app:destination="@id/feedPage" />
+        <action
+            android:id="@+id/action_fitMakerPage_to_profilePage"
+            app:destination="@id/profilePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/profilePage"
+        android:name="com.example.fitmoji.ProfilePage"
+        android:label="fragment_profile_page"
+        tools:layout="@layout/fragment_profile_page" />
+    <fragment
+        android:id="@+id/votePage"
+        android:name="com.example.fitmoji.VotePage"
+        android:label="fragment_vote_page"
+        tools:layout="@layout/fragment_vote_page" >
+        <action
+            android:id="@+id/action_votePage_to_fitMakerPage"
+            app:destination="@id/fitMakerPage" />
+        <action
+            android:id="@+id/action_votePage_to_feedPage2"
+            app:destination="@id/feedPage" />
+        <action
+            android:id="@+id/action_votePage_to_profilePage"
+            app:destination="@id/profilePage" />
+    </fragment>
+    <fragment
+        android:id="@+id/welcomePage"
+        android:name="com.example.fitmoji.WelcomePage"
+        android:label="fragment_welcome_page"
+        tools:layout="@layout/fragment_welcome_page" >
+        <action
+            android:id="@+id/action_welcomePage_to_fitMakerPage"
+            app:destination="@id/fitMakerPage" />
+    </fragment>
+</navigation>

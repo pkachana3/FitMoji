@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WelcomePage"
+    android:background="@color/cardview_dark_background">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Welcome"
+        android:textAlignment="center"
+        android:textSize="40dp"
+        android:fontFamily="sans-serif-light"
+        android:textColor="@color/purple_200"
+        android:layout_marginTop="50dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Click to Continue"
+        android:fontFamily="sans-serif-thin"
+        android:textAlignment="center"
+        android:textSize="35dp"
+        android:textColor="@color/purple_200"
+        android:layout_marginTop="250dp" />
+
+    <Button
+        android:id="@+id/Continue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Continue"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/purple_200"/>
+
+</FrameLayout>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "969035056287",
+    "project_id": "fitmoji-e1659",
+    "storage_bucket": "fitmoji-e1659.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:969035056287:android:365013e914eb3afb880eaa",
+        "android_client_info": {
+          "package_name": "com.example.fitmoji"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "969035056287-v0t3i7f0m009qebnlb427fljceuvrvis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDOkKQsh3BhIRRM-DjmJ4GIRvGmqFd9OD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "969035056287-v0t3i7f0m009qebnlb427fljceuvrvis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
