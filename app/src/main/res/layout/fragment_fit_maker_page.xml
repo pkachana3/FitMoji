@@ -92,6 +92,7 @@
         android:src="@drawable/shirticon" />
 
     <RadioGroup
+        android:layout_marginTop="200dp"
         android:visibility="gone"
         android:id="@+id/ShirtsGroup"
         android:layout_width="210dp"
@@ -124,6 +125,7 @@
         android:src="@drawable/panticon"/>
 
     <RadioGroup
+        android:layout_marginTop="200dp"
         android:visibility="gone"
         android:id="@+id/PantsGroup"
         android:layout_width="210dp"
@@ -161,6 +163,7 @@
         app:layout_constraintTop_toBottomOf="@id/PantBtn" />
 
     <RadioGroup
+        android:layout_marginTop="200dp"
         android:visibility="gone"
         android:id="@+id/ShoesGroup"
         android:layout_width="210dp"
@@ -204,6 +207,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Submitted!"/>
+
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/imageView3"
+        android:layout_width="133dp"
+        android:layout_height="62dp"
+        android:src="@drawable/coversmall"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

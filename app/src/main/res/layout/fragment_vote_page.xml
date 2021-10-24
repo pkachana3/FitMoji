@@ -8,6 +8,16 @@
     tools:context=".VotePage"
     android:id="@+id/parentLayout">
 
+    <ImageView
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:id="@+id/imageView3"
+        android:layout_width="133dp"
+        android:layout_height="62dp"
+        android:src="@drawable/coversmall"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
@@ -20,40 +30,34 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent" />
 
-    <Button
+
+    <ImageButton
+        android:src="@drawable/fitmaker"
+        app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:id="@+id/Profile"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Profile" />
-
-    <Button
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/FitMaker"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="FitMaker" />
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@color/black"/>
 
-    <Button
+    <ImageButton
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toRightOf="@id/FitMaker"
         app:layout_constraintRight_toLeftOf="@id/Feed"
-        app:layout_constraintTop_toTopOf="parent"
         android:id="@+id/Vote"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:textColor="@color/black"
-        android:text="Vote" />
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@color/black"
+        android:src="@drawable/vote" />
 
-    <Button
+    <ImageButton
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/Feed"
-        android:layout_width="120dp"
-        android:layout_height="wrap_content"
-        android:text="Feed" />
-
+        android:layout_width="150dp"
+        android:layout_height="55dp"
+        android:background="@color/black"
+        android:src="@drawable/feed" />
 
     <Button
         android:id="@+id/SwipeLeft"
@@ -62,7 +66,7 @@
         android:backgroundTint="@color/fui_transparent"
         android:textColor="@color/fui_transparent"
         android:visibility="visible"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Vote"
         style="?android:attr/borderlessButtonStyle"
@@ -74,7 +78,7 @@
         android:layout_height="626dp"
         android:backgroundTint="@color/fui_transparent"
         android:textColor="@color/fui_transparent"
-        app:layout_constraintBottom_toTopOf="@+id/Profile"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         style="?android:attr/borderlessButtonStyle"
         app:layout_constraintTop_toBottomOf="@+id/Vote" />
@@ -104,5 +108,16 @@
         android:src="@drawable/fit1"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="70dp" />
+
+    <ImageButton
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/Profile"
+        android:src="@drawable/profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
