@@ -7,9 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.RadioGroup
+import android.widget.*
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
@@ -30,19 +28,20 @@ class FitMakerPage : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.Profile).setOnClickListener(this)
-        view.findViewById<Button>(R.id.Feed).setOnClickListener(this)
-        view.findViewById<Button>(R.id.Vote).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.Profile).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.Feed).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.Vote).setOnClickListener(this)
         view.findViewById<Button>(R.id.BackBtn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.ShirtBtn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.PantBtn).setOnClickListener(this)
-        view.findViewById<Button>(R.id.ShoeBtn).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.ShirtBtn).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.PantBtn).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.ShoeBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.blackShirtBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.redShirtBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.blackPantBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.blackShortBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.shoeBtn).setOnClickListener(this)
         view.findViewById<Button>(R.id.sandalBtn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.button4).setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -54,27 +53,30 @@ class FitMakerPage : Fragment(), View.OnClickListener {
                 view?.findViewById<RadioGroup>(R.id.ShirtsGroup)!!.visibility = View.GONE
                 view?.findViewById<RadioGroup>(R.id.PantsGroup)!!.visibility = View.GONE
                 view?.findViewById<RadioGroup>(R.id.ShoesGroup)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.ShirtBtn)!!.visibility = View.VISIBLE
-                view?.findViewById<Button>(R.id.PantBtn)!!.visibility = View.VISIBLE
-                view?.findViewById<Button>(R.id.ShoeBtn)!!.visibility = View.VISIBLE
+                view?.findViewById<ImageButton>(R.id.ShirtBtn)!!.visibility = View.VISIBLE
+                view?.findViewById<ImageButton>(R.id.PantBtn)!!.visibility = View.VISIBLE
+                view?.findViewById<ImageButton>(R.id.ShoeBtn)!!.visibility = View.VISIBLE
             }
             R.id.ShirtBtn -> {
                 view?.findViewById<RadioGroup>(R.id.ShirtsGroup)!!.visibility = View.VISIBLE
-                view?.findViewById<Button>(R.id.ShirtBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.PantBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShirtBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.PantBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<TextView>(R.id.textView)!!.visibility = View.GONE
             }
             R.id.PantBtn -> {
                 view?.findViewById<RadioGroup>(R.id.PantsGroup)!!.visibility = View.VISIBLE
-                view?.findViewById<Button>(R.id.ShirtBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.PantBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShirtBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.PantBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<TextView>(R.id.textView)!!.visibility = View.GONE
             }
             R.id.ShoeBtn -> {
                 view?.findViewById<RadioGroup>(R.id.ShoesGroup)!!.visibility = View.VISIBLE
-                view?.findViewById<Button>(R.id.ShirtBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.PantBtn)!!.visibility = View.GONE
-                view?.findViewById<Button>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShirtBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.PantBtn)!!.visibility = View.GONE
+                view?.findViewById<ImageButton>(R.id.ShoeBtn)!!.visibility = View.GONE
+                view?.findViewById<TextView>(R.id.textView)!!.visibility = View.GONE
             }
             R.id.blackShirtBtn -> {
                 shirt = "blackshirt"
@@ -100,6 +102,9 @@ class FitMakerPage : Fragment(), View.OnClickListener {
                 shoe = "sandal"
                 updateOutfit()
             }
+            R.id.button4 -> {
+                view?.findViewById<TextView>(R.id.textView)!!.visibility = View.VISIBLE
+            }
         }
     }
 
@@ -110,7 +115,7 @@ class FitMakerPage : Fragment(), View.OnClickListener {
                     view?.findViewById<ImageView>(R.id.FitMojiImg)?.setImageResource(R.drawable.man_blackshirt_blackpant_blackshoe)
                 }
                 else {
-                    view?.findViewById<ImageView>(R.id.FitMojiImg)?.setImageResource(R.drawable.man_blackshirt_blackpant_blackshoe)
+                    view?.findViewById<ImageView>(R.id.FitMojiImg)?.setImageResource(R.drawable.man_blackshirt_blackpant_sandal)
                 }
             } else {
                 if (shoe.equals("blackshoe")) {
