@@ -139,7 +139,7 @@
             android:id="@+id/jeanPantBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/jeans"
+            android:button="@drawable/blackpant"
             app:layout_constraintLeft_toRightOf="@id/blackShirtBtn"
             app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
     </RadioGroup>
