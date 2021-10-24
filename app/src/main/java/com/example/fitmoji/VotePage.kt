@@ -72,9 +72,9 @@ class VotePage : Fragment(), View.OnClickListener {
                 if (cards.size != 0) {
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
-                    var card = (0..cards.size).random()
+                    var card = (1..cards.size).random() - 1
                     view?.findViewById<ImageView>(R.id.imageView2)?.setImageResource(cards[card])
-                    likes.set(card, cards.get(card) + 1)
+                    likes.set(card, cards.get(card))
                     cards.remove(cards[card])
                 } else {
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.GONE
