@@ -58,12 +58,56 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        android:id="@+id/imageView3"
+        android:id="@+id/FitMojiImg"
         android:layout_width="130dp"
         android:layout_height="357dp"
         android:layout_marginRight="25dp"
         android:src="@drawable/fit1"
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="157dp" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/FitMaker"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/ShirtBtn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:layout_marginTop="100dp"
+        android:text="Shirt"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="125dp" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/ShirtBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="100dp"
+        android:id="@+id/PantBtn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:text="Pants"
+        tools:layout_editor_absoluteX="16dp"
+        tools:layout_editor_absoluteY="297dp" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/PantBtn"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginTop="100dp"
+        android:id="@+id/ShoeBtn"
+        android:layout_width="100dp"
+        android:layout_height="75dp"
+        android:text="Shoes"
+        tools:layout_editor_absoluteX="26dp"
+        tools:layout_editor_absoluteY="464dp" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@id/FitMojiImg"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="25dp"
+        android:id="@+id/button4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Submit Fit"
+        tools:layout_editor_absoluteX="219dp"
+        tools:layout_editor_absoluteY="593dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
