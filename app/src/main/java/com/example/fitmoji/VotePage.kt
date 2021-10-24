@@ -33,7 +33,7 @@ class VotePage : Fragment(), View.OnClickListener {
         var cards: MutableList<Int> = mutableListOf(R.drawable.fit1, R.drawable.fit2, R.drawable.fit3,
             R.drawable.fit4,R.drawable.fit5,R.drawable.fit6,R.drawable.fit7,
             R.drawable.fit8, R.drawable.fit9, R.drawable.fit10, R.drawable.fit11,
-            R.drawable.fit12, R.drawable.fit13);
+            R.drawable.fit12, R.drawable.man_redshirt_blackshort_sandal, R.drawable.fit13);
 
         var likes: MutableList<Int> = mutableListOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     }
