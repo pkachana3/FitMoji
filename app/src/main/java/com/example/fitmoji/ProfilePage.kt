@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 import com.firebase.ui.auth.AuthUI
@@ -26,6 +27,9 @@ class ProfilePage : Fragment(), View.OnClickListener {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
         view.findViewById<Button>(R.id.logout).setOnClickListener(this)
+        view.findViewById<TextView>(R.id.liked).text = "Total Fits Liked:" + VotePage.getTotalLikes()
+        view.findViewById<TextView>(R.id.disliked).text = "Total Fits Disliked:" + VotePage.getTotalDisLikes()
+
     }
 
     override fun onClick(p0: View?) {

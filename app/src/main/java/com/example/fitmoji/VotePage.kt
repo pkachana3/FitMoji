@@ -15,15 +15,25 @@ import java.util.*
 import kotlin.collections.ArrayList
 
 class VotePage : Fragment(), View.OnClickListener {
+
     var navController: NavController? = null
     private var courseModalArrayList: ArrayList<R.drawable>? = null
     companion object {
+        var totalLikes = 0
+        var totalDislikes = 0
+
+        fun getTotalLikes(): Any? {
+            return totalLikes
+        }
+
+        fun getTotalDisLikes(): Any? {
+            return totalDislikes
+        }
+
         var cards: MutableList<Int> = mutableListOf(R.drawable.fit1, R.drawable.fit2, R.drawable.fit3,
             R.drawable.fit4,R.drawable.fit5,R.drawable.fit6,R.drawable.fit7,
             R.drawable.fit8, R.drawable.fit9, R.drawable.fit10, R.drawable.fit11,
             R.drawable.fit12, R.drawable.fit13);
-        var totalLikes = 0
-        var totalDislikes = 0
 
         var likes: MutableList<Int> = mutableListOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     }
@@ -81,10 +91,19 @@ class VotePage : Fragment(), View.OnClickListener {
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
                     view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
                 }
+                totalLikes++
             }
         }
     }
     fun getOutfitLikes(outfit: Int): Int {
         return likes[outfit]
+    }
+
+    fun getTotalLikes(): Int {
+        return totalLikes
+    }
+
+    fun getTotalDislikes(): Int {
+        return totalDislikes
     }
 }

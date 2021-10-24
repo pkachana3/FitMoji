@@ -8,10 +8,44 @@
 
     <Button
         android:id="@+id/logout"
+        android:layout_marginBottom="25dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Log Out"
         android:backgroundTint="@color/black"
+        android:layout_gravity="top"
+        android:layout_marginLeft="310dp"/>
+
+    <TextView
+        android:layout_marginBottom="25dp"
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:textSize="30dp"
+        android:text="Statistics"
         android:layout_gravity="center"/>
+
+    <TextView
+        android:layout_marginTop="30dp"
+        android:id="@+id/liked"
+        android:textColor="@color/white"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Fits Liked:"
+        android:layout_gravity="center"/>
+
+    <TextView
+        android:textColor="@color/white"
+        android:layout_marginTop="60dp"
+        android:id="@+id/disliked"
+        android:textSize="15dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Total Fits Disliked:"
+        android:layout_gravity="center"/>
+
+
 
 </FrameLayout>
