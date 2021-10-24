@@ -10,10 +10,11 @@
 
     <Button
         android:id="@+id/BackBtn"
-        android:layout_width="match_parent"
+        android:layout_width="200dp"
         android:layout_height="match_parent"
         android:text=""
         android:layout_gravity="center"
+        app:layout_constraintRight_toRightOf="parent"
         android:backgroundTint="@color/fui_transparent"/>
 
     <TextView
@@ -86,6 +87,7 @@
         tools:layout_editor_absoluteY="125dp" />
 
     <RadioGroup
+        android:visibility="gone"
         android:id="@+id/ShirtsGroup"
         android:layout_width="210dp"
         android:layout_height="472dp"
@@ -101,7 +103,7 @@
             android:checked="true" />
 
         <RadioButton
-            android:id="@+id/radio2"
+            android:id="@+id/redShirtBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
             android:button="@drawable/redshirt" />
@@ -119,6 +121,7 @@
         tools:layout_editor_absoluteY="297dp" />
 
     <RadioGroup
+        android:visibility="gone"
         android:id="@+id/PantsGroup"
         android:layout_width="210dp"
         android:layout_height="472dp"
@@ -136,10 +139,10 @@
             app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
 
         <RadioButton
-            android:id="@+id/jeanPantBtn"
+            android:id="@+id/blackShortBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/blackpant"
+            android:button="@drawable/blackshort"
             app:layout_constraintLeft_toRightOf="@id/blackShirtBtn"
             app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
     </RadioGroup>
@@ -156,6 +159,7 @@
         tools:layout_editor_absoluteY="464dp" />
 
     <RadioGroup
+        android:visibility="gone"
         android:id="@+id/ShoesGroup"
         android:layout_width="210dp"
         android:layout_height="472dp"
