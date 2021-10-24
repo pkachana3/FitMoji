@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.RadioGroup
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
@@ -26,6 +27,8 @@ class FitMakerPage : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.Profile).setOnClickListener(this)
         view.findViewById<Button>(R.id.Feed).setOnClickListener(this)
         view.findViewById<Button>(R.id.Vote).setOnClickListener(this)
+        view.findViewById<Button>(R.id.BackBtn).setOnClickListener(this)
+        view.findViewById<Button>(R.id.ShirtBtn).setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -33,6 +36,12 @@ class FitMakerPage : Fragment(), View.OnClickListener {
             R.id.Profile -> navController!!.navigate(R.id.action_fitMakerPage_to_profilePage)
             R.id.Feed -> navController!!.navigate(R.id.action_fitMakerPage_to_feedPage)
             R.id.Vote -> navController!!.navigate(R.id.action_fitMakerPage_to_votePage)
+            R.id.BackBtn -> {
+                view?.findViewById<RadioGroup>(R.id.ShirtsGroup)!!.visibility = View.GONE
+                view?.findViewById<RadioGroup>(R.id.PantsGroup)!!.visibility = View.GONE
+                view?.findViewById<RadioGroup>(R.id.ShoesGroup)!!.visibility = View.GONE
+            }
+            R.id.ShirtBtn -> view?.findViewById<RadioGroup>(R.id.ShirtsGroup)!!.visibility = View.VISIBLE
         }
     }
 }

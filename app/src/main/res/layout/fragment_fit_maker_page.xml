@@ -8,6 +8,14 @@
     tools:context=".FitMakerPage"
     android:id="@+id/parentLayout">
 
+    <Button
+        android:id="@+id/BackBtn"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text=""
+        android:layout_gravity="center"
+        android:backgroundTint="@color/fui_transparent"/>
+
     <TextView
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -62,7 +70,7 @@
         android:layout_width="130dp"
         android:layout_height="357dp"
         android:layout_marginRight="25dp"
-        android:src="@drawable/fit1"
+        android:src="@drawable/man_blackshirt_blackpant_blackshoe"
         tools:layout_editor_absoluteX="234dp"
         tools:layout_editor_absoluteY="157dp" />
 
@@ -77,6 +85,28 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="125dp" />
 
+    <RadioGroup
+        android:id="@+id/ShirtsGroup"
+        android:layout_width="210dp"
+        android:layout_height="472dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ShirtBtn"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/blackShirtBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/blackshirt"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/radio2"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/redshirt" />
+    </RadioGroup>
+
     <Button
         app:layout_constraintTop_toBottomOf="@id/ShirtBtn"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -88,6 +118,32 @@
         tools:layout_editor_absoluteX="16dp"
         tools:layout_editor_absoluteY="297dp" />
 
+    <RadioGroup
+        android:id="@+id/PantsGroup"
+        android:layout_width="210dp"
+        android:layout_height="472dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/PantBtn"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/blackPantBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/blackpant"
+            android:checked="true"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
+
+        <RadioButton
+            android:id="@+id/jeanPantBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/jeans"
+            app:layout_constraintLeft_toRightOf="@id/blackShirtBtn"
+            app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
+    </RadioGroup>
+
     <Button
         app:layout_constraintTop_toBottomOf="@id/PantBtn"
         app:layout_constraintLeft_toLeftOf="parent"
@@ -98,6 +154,28 @@
         android:text="Shoes"
         tools:layout_editor_absoluteX="26dp"
         tools:layout_editor_absoluteY="464dp" />
+
+    <RadioGroup
+        android:id="@+id/ShoesGroup"
+        android:layout_width="210dp"
+        android:layout_height="472dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ShoeBtn"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/shoeBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/blackshoe"
+            android:checked="true" />
+
+        <RadioButton
+            android:id="@+id/sandalBtn"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:button="@drawable/sandal" />
+    </RadioGroup>
 
     <Button
         app:layout_constraintTop_toBottomOf="@id/FitMojiImg"
