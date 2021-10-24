@@ -65,17 +65,18 @@
         app:layout_constraintBottom_toTopOf="@+id/textView"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Vote"
+        style="?android:attr/borderlessButtonStyle"
         tools:visibility="invisible" />
 
     <Button
         android:id="@+id/SwipeRight"
         android:layout_width="210dp"
         android:layout_height="626dp"
-        android:background="?android:attr/selectableItemBackground"
         android:backgroundTint="@color/fui_transparent"
         android:textColor="@color/fui_transparent"
         app:layout_constraintBottom_toTopOf="@+id/Profile"
         app:layout_constraintRight_toRightOf="parent"
+        style="?android:attr/borderlessButtonStyle"
         app:layout_constraintTop_toBottomOf="@+id/Vote" />
     <TextView
         app:layout_constraintRight_toRightOf="parent"
