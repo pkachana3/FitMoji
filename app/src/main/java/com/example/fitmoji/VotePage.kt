@@ -66,6 +66,9 @@ class VotePage : Fragment(), View.OnClickListener {
             R.id.FitMaker -> navController!!.navigate(R.id.action_votePage_to_fitMakerPage)
             R.id.SwipeLeft -> {
                 if (cards.size != 0) {
+                    if(view?.findViewById<ImageView>(R.id.imageView2)?.getVisibility() == View.VISIBLE) {
+                        totalDislikes++
+                    }
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
                     var card = cards.random()
@@ -76,10 +79,12 @@ class VotePage : Fragment(), View.OnClickListener {
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
                     view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
                 }
-                totalDislikes++
             }
             R.id.SwipeRight -> {
                 if (cards.size != 0) {
+                    if(view?.findViewById<ImageView>(R.id.imageView2)?.getVisibility() == View.VISIBLE) {
+                        totalLikes++
+                    }
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
                     var card = (1..cards.size).random() - 1
@@ -91,7 +96,6 @@ class VotePage : Fragment(), View.OnClickListener {
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
                     view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
                 }
-                totalLikes++
             }
         }
     }
