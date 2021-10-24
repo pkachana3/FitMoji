@@ -31,17 +31,6 @@
         android:layout_marginTop="50dp" />
 
     <ImageButton
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        android:layout_marginTop="10dp"
-        android:layout_marginRight="10dp"
-        android:id="@+id/Profile"
-        android:src="@drawable/profile"
-        android:layout_width="40dp"
-        android:layout_height="40dp"
-        android:background="@color/black"/>
-
-    <ImageButton
         android:src="@drawable/fitmaker"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -89,7 +78,7 @@
         android:layout_width="120dp"
         android:layout_height="100dp"
         android:layout_marginTop="100dp"
-        android:src="@drawable/shirticon" />
+        android:src="@drawable/shirticon"/>
 
     <RadioGroup
         android:layout_marginTop="200dp"
@@ -98,21 +87,22 @@
         android:layout_width="210dp"
         android:layout_height="472dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ShirtBtn"
-        android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@id/ShirtBtn">
 
         <RadioButton
             android:id="@+id/blackShirtBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/blackshirt"
+            android:buttonTint="@color/fui_transparent"
+            android:drawableRight="@drawable/blackshirt"
             android:checked="true" />
 
         <RadioButton
             android:id="@+id/redShirtBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/redshirt" />
+            android:buttonTint="@color/fui_transparent"
+            android:drawableRight="@drawable/redshirt" />
     </RadioGroup>
 
     <ImageButton
@@ -131,23 +121,26 @@
         android:layout_width="210dp"
         android:layout_height="472dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/PantBtn"
-        android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@id/PantBtn">
 
         <RadioButton
+
+            android:buttonTint="@color/fui_transparent"
             android:id="@+id/blackPantBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/blackpant"
+            android:drawableRight="@drawable/blackpant"
             android:checked="true"
             app:layout_constraintLeft_toLeftOf="parent"
             app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
 
         <RadioButton
+
+            android:buttonTint="@color/fui_transparent"
             android:id="@+id/blackShortBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/blackshort"
+            android:drawableRight="@drawable/blackshort"
             app:layout_constraintLeft_toRightOf="@id/blackShirtBtn"
             app:layout_constraintTop_toBottomOf="@id/ShirtBtn" />
     </RadioGroup>
@@ -169,21 +162,23 @@
         android:layout_width="210dp"
         android:layout_height="472dp"
         app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/ShoeBtn"
-        android:orientation="horizontal">
+        app:layout_constraintTop_toBottomOf="@id/ShoeBtn">
 
         <RadioButton
+            android:buttonTint="@color/fui_transparent"
             android:id="@+id/shoeBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/blackshoe"
+            android:drawableRight="@drawable/blackshoe"
             android:checked="true" />
 
         <RadioButton
+
+            android:buttonTint="@color/fui_transparent"
             android:id="@+id/sandalBtn"
             android:layout_width="100dp"
             android:layout_height="100dp"
-            android:button="@drawable/sandal" />
+            android:drawableRight="@drawable/sandal" />
     </RadioGroup>
 
     <Button
@@ -218,5 +213,15 @@
         tools:layout_editor_absoluteX="0dp"
         tools:layout_editor_absoluteY="0dp" />
 
+    <ImageButton
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/Profile"
+        android:src="@drawable/profile"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:background="@color/black"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
