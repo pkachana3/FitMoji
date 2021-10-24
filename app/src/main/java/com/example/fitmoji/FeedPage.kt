@@ -27,6 +27,7 @@ class FeedPage : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.Profile).setOnClickListener(this)
         view.findViewById<Button>(R.id.Vote).setOnClickListener(this)
         view.findViewById<Button>(R.id.FitMaker).setOnClickListener(this)
+
     }
 
     override fun onClick(p0: View?) {

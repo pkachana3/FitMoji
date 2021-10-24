@@ -54,4 +54,16 @@
         android:layout_height="wrap_content"
         android:text="Feed" />
 
+    <ImageView
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:id="@+id/imageView3"
+        android:layout_width="130dp"
+        android:layout_height="357dp"
+        android:layout_marginRight="25dp"
+        android:src="@drawable/fit1"
+        tools:layout_editor_absoluteX="234dp"
+        tools:layout_editor_absoluteY="157dp" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

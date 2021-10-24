@@ -55,11 +55,25 @@
         android:text="Feed" />
 
     <androidx.recyclerview.widget.RecyclerView
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/FitMaker"
-        android:layout_width="409dp"
+        android:layout_width="wrap_content"
         android:layout_height="628dp"
-        tools:layout_editor_absoluteX="1dp"
-        tools:layout_editor_absoluteY="49dp" />
+        app:layout_constraintBottom_toTopOf="@id/Profile"
+        app:layout_constraintTop_toBottomOf="@id/FitMaker"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        tools:listitem="@layout/feed_item" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="10dp"
+        android:id="@+id/floatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:src="@android:drawable/ic_input_add"
+        tools:layout_editor_absoluteX="370dp"
+        tools:layout_editor_absoluteY="692dp" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
