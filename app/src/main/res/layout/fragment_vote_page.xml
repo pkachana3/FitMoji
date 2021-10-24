@@ -9,16 +9,16 @@
     android:id="@+id/parentLayout">
 
     <TextView
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="sans-serif-light"
         android:text="Vote"
         android:textAlignment="center"
-        android:textSize="40dp"
-        android:fontFamily="sans-serif-light"
         android:textColor="@color/purple_200"
-        android:layout_marginTop="50dp" />
+        android:textSize="40dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
 
     <Button
         app:layout_constraintBottom_toBottomOf="parent"
@@ -54,15 +54,53 @@
         android:layout_height="wrap_content"
         android:text="Feed" />
 
+
+    <Button
+        android:id="@+id/SwipeLeft"
+        android:layout_width="202dp"
+        android:layout_height="631dp"
+        android:backgroundTint="@color/fui_transparent"
+        android:textColor="@color/fui_transparent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Vote"
+        tools:visibility="invisible" />
+
+    <Button
+        android:id="@+id/SwipeRight"
+        android:layout_width="210dp"
+        android:layout_height="626dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:backgroundTint="@color/fui_transparent"
+        android:textColor="@color/fui_transparent"
+        app:layout_constraintBottom_toTopOf="@+id/Profile"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Vote" />
+    <TextView
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to View FitMoji's!"
+        android:textSize="45dp"
+        android:textColor = "@color/white"
+        android:textAlignment="center"
+        tools:layout_editor_absoluteX="81dp"
+        tools:layout_editor_absoluteY="264dp" />
     <ImageView
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"
         android:id="@+id/imageView2"
+        android:visibility="gone"
         android:layout_width="274dp"
         android:layout_height="591dp"
-        android:src="@drawable/man_blackshirt_blackpant_blackshoe"
+        android:src="@drawable/fit1"
         tools:layout_editor_absoluteX="68dp"
         tools:layout_editor_absoluteY="70dp" />
 

@@ -6,12 +6,25 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
+import java.util.*
+import kotlin.collections.ArrayList
 
 class VotePage : Fragment(), View.OnClickListener {
     var navController: NavController? = null
-
+    private var courseModalArrayList: ArrayList<R.drawable>? = null
+    companion object {
+        var cards: MutableList<Int> = mutableListOf(R.drawable.fit1, R.drawable.fit2, R.drawable.fit3,
+            R.drawable.fit4,R.drawable.fit5,R.drawable.fit6,R.drawable.fit7,
+            R.drawable.fit8, R.drawable.fit9, R.drawable.fit10, R.drawable.fit11,
+            R.drawable.fit12, R.drawable.fit13);
+        var totalLikes = 0
+        var totalDislikes = 0
+    }
+    var index = 0;
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -26,6 +39,11 @@ class VotePage : Fragment(), View.OnClickListener {
         view.findViewById<Button>(R.id.Profile).setOnClickListener(this)
         view.findViewById<Button>(R.id.Feed).setOnClickListener(this)
         view.findViewById<Button>(R.id.FitMaker).setOnClickListener(this)
+        courseModalArrayList = ArrayList()
+        courseModalArrayList!!
+
+        view.findViewById<Button>(R.id.SwipeLeft).setOnClickListener(this)
+        view.findViewById<Button>(R.id.SwipeRight).setOnClickListener(this)
     }
 
     override fun onClick(p0: View?) {
@@ -33,6 +51,35 @@ class VotePage : Fragment(), View.OnClickListener {
             R.id.Profile -> navController!!.navigate(R.id.action_votePage_to_profilePage)
             R.id.Feed -> navController!!.navigate(R.id.action_votePage_to_feedPage2)
             R.id.FitMaker -> navController!!.navigate(R.id.action_votePage_to_fitMakerPage)
+            R.id.SwipeLeft -> {
+                if (cards.size != 0) {
+                    view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
+                    view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
+                    var card = cards.random()
+                    view?.findViewById<ImageView>(R.id.imageView2)?.setImageResource(card)
+                    cards.remove(card)
+                } else {
+                    view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.GONE
+                    view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
+                    view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
+                }
+                totalDislikes++
+            }
+            R.id.SwipeRight -> {
+                if (cards.size != 0) {
+                    view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
+                    view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
+                    var card = cards.random()
+                    view?.findViewById<ImageView>(R.id.imageView2)?.setImageResource(card)
+                    cards.remove(card)
+                } else {
+                    view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.GONE
+                    view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
+                    view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
+                }
+                totalLikes++
+            }
         }
     }
+
 }
