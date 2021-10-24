@@ -24,6 +24,8 @@ class VotePage : Fragment(), View.OnClickListener {
             R.drawable.fit12, R.drawable.fit13);
         var totalLikes = 0
         var totalDislikes = 0
+
+        var likes: MutableList<Int> = mutableListOf(0,0,0,0,0,0,0,0,0,0,0,0,0,0);
     }
     var index = 0;
     override fun onCreateView(
@@ -70,17 +72,19 @@ class VotePage : Fragment(), View.OnClickListener {
                 if (cards.size != 0) {
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.GONE
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.VISIBLE
-                    var card = cards.random()
-                    view?.findViewById<ImageView>(R.id.imageView2)?.setImageResource(card)
-                    cards.remove(card)
+                    var card = (0..cards.size).random()
+                    view?.findViewById<ImageView>(R.id.imageView2)?.setImageResource(cards[card])
+                    likes.set(card, cards.get(card) + 1)
+                    cards.remove(cards[card])
                 } else {
                     view?.findViewById<ImageView>(R.id.imageView2)?.visibility = View.GONE
                     view?.findViewById<TextView>(R.id.textView2)?.visibility = View.VISIBLE
                     view?.findViewById<TextView>(R.id.textView2)?.setText("Out of Outfits!")
                 }
-                totalLikes++
             }
         }
     }
-
+    fun getOutfitLikes(outfit: Int): Int {
+        return likes[outfit]
+    }
 }
