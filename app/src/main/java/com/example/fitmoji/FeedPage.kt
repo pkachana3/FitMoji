@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.NavController
 import androidx.navigation.Navigation
 
@@ -24,9 +25,9 @@ class FeedPage : Fragment(), View.OnClickListener {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         navController = Navigation.findNavController(view)
-        view.findViewById<Button>(R.id.Profile).setOnClickListener(this)
-        view.findViewById<Button>(R.id.Vote).setOnClickListener(this)
-        view.findViewById<Button>(R.id.FitMaker).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.Profile).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.Vote).setOnClickListener(this)
+        view.findViewById<ImageButton>(R.id.FitMaker).setOnClickListener(this)
 
     }
 
